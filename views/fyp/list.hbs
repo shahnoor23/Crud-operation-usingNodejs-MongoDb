@@ -1,0 +1,45 @@
+<h3><a class="btn btn-secondary" href="/fyp"><i class="fa fa-plus"></i> Create New</a> FYP List</h3>
+</head>
+<div class="container">
+ 
+ 
+    <table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Batch Year</th>
+            <th>Roll No</th>
+            <th>Email</th>
+            <th>Student Name</th>
+            <th>Project Name</th>
+            <th>Project Supervisor</th>
+            <th>External Supervisor</th>
+            <th>Co Supervisor</th>
+            <th>Project Id</th>
+            <th></th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.batch_Year}}</td>
+            <td>{{this.roll_No}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.student_Name}}</td>
+            <td>{{this.project_Name}}</td>
+            <td>{{this.project_Supervisor}}</td> 
+            <td>{{this.external_Supervisor}}</td> 
+            <td>{{this.co_Supervisor}}</td> 
+            <td>{{this.project_id}}</td>
+            <td>
+            <a href="/fyp/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/fyp/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+</tbody>    
+</table>
+</div>
+
+
